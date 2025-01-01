@@ -39,7 +39,6 @@ if [[ ! -f /run/user/1000/.ssh-agent-ready ]]; then
         sleep 1
     done
     echo "Adding SSH keys..."
-    ssh-add ~/.ssh/id_rsa
-    ssh-add ~/.ssh/id_ed25519
+    ssh-add
     touch /run/user/1000/.ssh-agent-ready
 fi

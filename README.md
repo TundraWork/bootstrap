@@ -52,3 +52,8 @@ EOF
 # After creating `.config/systemd/user/ssh-agent.service`
 systemctl --user enable ssh-agent.service
 ```
+
+```bash
+# After creating `/etc/systemd/system/wslg.service`
+sudo systemctl enable wslg.service
+```

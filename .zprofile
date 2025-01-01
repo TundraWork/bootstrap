@@ -34,8 +34,8 @@ export DISPLAY=:0
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}ssh-agent.socket"
 # ssh-agent bootstrap only needs to be done once for a system boot
 if [[ ! -f /run/user/1000/.ssh-agent-ready ]]; then
-    echo "Waiting for systemd to be ready..."
-    while ! systemctl is-active --quiet multi-user.target > /dev/null 2>&1; do
+    echo "Waiting for ssh-agent to be ready..."
+    while ! systemctl --user is-active --quiet ssh-agent.service > /dev/null 2>&1; do
         sleep 1
     done
     echo "Adding SSH keys..."

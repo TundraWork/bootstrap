@@ -16,11 +16,10 @@ usermod -aG wheel tundra
 
 ```bash
 su tundra
+cd ~
 ```
 
 ```bash
-cd ~
-
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -47,4 +46,9 @@ zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
 EOF
+```
+
+```bash
+# After creating `.config/systemd/user/ssh-agent.service`
+systemctl --user enable ssh-agent.service
 ```

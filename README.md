@@ -25,27 +25,6 @@ cd yay
 makepkg -si
 
 yay -S zsh-antidote
-
-cat << EOF >> ~/.zshrc
-
-# source antidote
-source '/usr/share/zsh-antidote/antidote.zsh'
-# initialize plugins statically with ~/.zsh_plugins.txt
-antidote load
-EOF
-
-cat << EOF > ~/.zsh_plugins.txt
-getantidote/use-omz
-ohmyzsh/ohmyzsh path:lib
-ohmyzsh/ohmyzsh path:plugins/colored-man-pages
-ohmyzsh/ohmyzsh path:plugins/magic-enter
-ohmyzsh/ohmyzsh path:themes/bira.zsh-theme
-
-zsh-users/zsh-completions kind:fpath path:src
-zsh-users/zsh-autosuggestions
-zsh-users/zsh-syntax-highlighting
-zsh-users/zsh-history-substring-search
-EOF
 ```
 
 ```bash

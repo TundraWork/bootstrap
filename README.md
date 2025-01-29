@@ -29,10 +29,10 @@ yay -S zsh-antidote
 
 ```bash
 # After creating `.config/systemd/user/ssh-agent.service`
-systemctl --user enable ssh-agent.service
+systemctl --user enable --now ssh-agent.service
 ```
 
 ```bash
-# After creating `/etc/systemd/system/wslg.service`
-sudo systemctl enable wslg.service
+# After creating `/etc/systemd/system/fix-wslg.service`
+sudo systemctl enable --now fix-wslg.service
 ```

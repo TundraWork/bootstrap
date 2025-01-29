@@ -1,11 +1,12 @@
 [Unit]
-Description=Fix WSLg - symlink /tmp/.X11-unix
+Description=Fix WSLg - symlink for X11 and wayland
 After=systemd-tmpfiles-setup.service
 
 [Service]
 Type=oneshot
 ExecStart=rmdir /tmp/.X11-unix
 ExecStart=ln -s /mnt/wslg/.X11-unix /tmp/
+ExecStart=ln -s /mnt/wslg/runtime-dir/wayland-0* /run/user/1000/
 
 [Install]
 WantedBy=sysinit.target

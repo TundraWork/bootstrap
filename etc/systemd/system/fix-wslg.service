@@ -6,7 +6,8 @@ After=systemd-tmpfiles-setup.service
 Type=oneshot
 ExecStart=rmdir /tmp/.X11-unix
 ExecStart=ln -s /mnt/wslg/.X11-unix /tmp/
-ExecStart=ln -s /mnt/wslg/runtime-dir/wayland-0* /run/user/1000/
+ExecStart=ln -s /mnt/wslg/runtime-dir/wayland-0 /run/user/1000/
+ExecStart=ln -s /mnt/wslg/runtime-dir/wayland-0.lock /run/user/1000/
 
 [Install]
 WantedBy=sysinit.target
